@@ -24,6 +24,21 @@ export interface GuideFaqItem {
   answer: string;
 }
 
+export interface GuideImage {
+  id: string;
+  url: string;
+  alt: string;
+  caption?: string;
+}
+
+export interface GuideVideo {
+  id: string;
+  type: 'youtube' | 'file';
+  youtubeId?: string;
+  url?: string;
+  title?: string;
+}
+
 export interface Guide {
   id: string;
   slug: string;
@@ -43,6 +58,8 @@ export interface Guide {
   stressLevel?: 'low' | 'medium' | 'high';
   updatedAt: string;
   heroImageUrl?: string;
+  gallery?: GuideImage[];
+  videos?: GuideVideo[];
   sections: GuideSection[];
   faq?: GuideFaqItem[];
   seo?: {

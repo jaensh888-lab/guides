@@ -21,6 +21,34 @@ export const guidesRu: Guide[] = [
     stressLevel: 'low',
     updatedAt: '2024-11-15T10:00:00.000Z',
     heroImageUrl: '/images/dubai-frame.jpg',
+    gallery: [
+      {
+        id: 'dubai-frame-1',
+        url: '/images/dubai-frame/inside.jpg',
+        alt: 'Вид из стеклянного коридора Dubai Frame',
+        caption: 'Смотровая площадка со стеклянным полом',
+      },
+      {
+        id: 'dubai-frame-2',
+        url: '/images/dubai-frame/exterior.jpg',
+        alt: 'Фасад Dubai Frame на закате',
+        caption: 'Золотая рамка на фоне Downtown Dubai',
+      },
+      {
+        id: 'dubai-frame-3',
+        url: '/images/dubai-frame/museum.jpg',
+        alt: 'Экспозиция внутри музея прошлого',
+        caption: 'Инсталляции о старом Дубае',
+      },
+    ],
+    videos: [
+      {
+        id: 'dubai-frame-overview',
+        type: 'youtube',
+        youtubeId: 'dQw4w9WgXcQ',
+        title: 'Обзор Dubai Frame с обзорной площадки',
+      },
+    ],
     sections: [
       {
         id: 'intro',

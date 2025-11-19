@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { guideAbsoluteUrl, SITE_URL } from '@/lib/seo';
+import GuideGallery from '@/components/GuideGallery';
+import GuideVideoSection from '@/components/GuideVideoSection';
 import SeoJsonLd from '@/components/SeoJsonLd';
 import type { Guide } from '@/types/guide';
 
@@ -189,6 +191,10 @@ export default function GuidePage({ guide, relatedGuides }: GuidePageProps) {
           </div>
         ))}
       </section>
+
+      {guide.gallery?.length ? <GuideGallery images={guide.gallery} /> : null}
+
+      {guide.videos?.length ? <GuideVideoSection videos={guide.videos} /> : null}
 
       {guide.faq && (
         <section className="rounded-3xl border border-slate-200 bg-white/90 p-6">
