@@ -1,10 +1,10 @@
 import type { MetadataRoute } from 'next';
 import { guidesRu } from '@/data/guides-ru';
+import { SITE_URL } from '@/lib/seo';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://yoots-atlas.example';
   const guideEntries = guidesRu.map((guide) => ({
-    url: `${baseUrl}/${guide.country}/${guide.slug}`,
+    url: `${SITE_URL}/${guide.country}/${guide.slug}`,
     lastModified: guide.updatedAt,
     changeFrequency: 'monthly' as const,
     priority: 0.7,
@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: baseUrl,
+      url: SITE_URL,
       lastModified: new Date().toISOString(),
       changeFrequency: 'weekly',
       priority: 1,
